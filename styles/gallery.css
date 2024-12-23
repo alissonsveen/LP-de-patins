@@ -112,3 +112,36 @@ section.gallery {
         transform: translateY(100%);
     }
 }
+
+@media (width < 80em) {
+    section.gallery {
+        display: flex;
+        flex-direction: column;
+
+        & header {
+            & span {
+                font-size: .75rem;
+            }
+            & h2 {
+                font-size: 1.5rem;
+                margin-top: .5rem;
+            }
+        }
+
+        & .content {
+            grid-template-areas: 
+            "A"
+            "B"
+            "C"
+            "D";
+            gap: 1.5rem;
+        }
+
+
+        & figure img {
+            width: 312px;
+            height: 256px;
+        }
+    
+    }
+}

@@ -225,3 +225,47 @@ section.hero {
         transform: translateY(-15rem);
     }
 }
+
+
+@media (width < 80em) {
+    & section.hero {
+        flex-direction: column-reverse;
+        gap: 2rem; 
+        
+        & > div:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            max-width: 19.5rem;
+
+            & h1 {
+                font-weight: 700;
+                font-size: 2rem;
+
+                & div {
+                    height: 2.5rem;
+            }  
+       }
+   } 
+            & .buttons {
+                flex-direction: column-reverse;
+                gap: 1.5rem;
+                margin-top: 0;
+           }
+
+           & > div:nth-child(2) {
+               height: auto;
+            & .content {
+                height: 19.5rem;
+            }
+            & img[src*="stars-1"] {
+                width: 3.5rem;
+                top: 5rem;
+            }
+            & img[src*="stars-2"] {
+                width: 1.6rem;
+                right: 0.5rem;
+            }
+        }
+    }
+}
